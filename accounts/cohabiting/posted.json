@@ -1,1 +1,16 @@
-{"counter": 0, "posts": []}
+{
+  "counter": 1,
+  "posts": [
+    {
+      "date": "2026-11-24T17:48:44+00:00",
+      "text": "A weekly reset without scorekeeping:\n\n1. Sunday, ten minutes: each of you writes the tasks you notice, not just the ones you do.\n2. Pick by dislike, not by fairness math. Swap what each hates least.\n3. Own a task fully, from noticing to finishing. 🏡🧡",
+      "pillar": "chores",
+      "format": "system",
+      "product": null,
+      "community": null,
+      "thread_id": "2125285500974231706",
+      "reply_id": null
+    }
+  ],
+  "started": "2026-11-24"
+}

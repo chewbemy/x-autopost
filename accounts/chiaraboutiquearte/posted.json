@@ -1,1 +1,16 @@
-{"counter": 0, "posts": []}
+{
+  "counter": 1,
+  "posts": [
+    {
+      "date": "2026-11-24T17:48:37+00:00",
+      "text": "Waiting for the kettle? Try this.\n\nFeel your feet on the floor.\nName three sounds you can hear.\nLet one breath out be slower than the one in.\n\nThat's about a minute. The kettle never minds. 💜✨",
+      "pillar": "mindfulness",
+      "format": "micro_practice",
+      "product": null,
+      "community": null,
+      "thread_id": "2125285471584735640",
+      "reply_id": null
+    }
+  ],
+  "started": "2026-11-24"
+}
