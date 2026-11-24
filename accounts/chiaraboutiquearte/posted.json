@@ -1,5 +1,5 @@
 {
-  "counter": 1,
+  "counter": 2,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -9,6 +9,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125285471584735640",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-24T22:00:56+00:00",
+      "text": "Some days you have no time to write much. Keep one question by your pen and answer it in two sentences.\n\nWhat did I do today that my future self will quietly thank me for?\n\nSmall things count here. A glass of water counts. 🌟",
+      "pillar": "journaling",
+      "format": "prompt",
+      "product": null,
+      "community": null,
+      "thread_id": "2125348969937072631",
       "reply_id": null
     }
   ],

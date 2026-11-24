@@ -1,5 +1,5 @@
 {
-  "counter": 1,
+  "counter": 2,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -9,6 +9,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125285500974231706",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-24T22:01:04+00:00",
+      "text": "Common mistake: splitting every bill 50/50 without asking if it feels fair.\n\nThe fix: sit down once and look at what each of you earns and needs. Then pick a split you both call fair, even if it isn't equal. Check it again in three months. 🧡🔑",
+      "pillar": "money",
+      "format": "mistake",
+      "product": null,
+      "community": null,
+      "thread_id": "2125349004938506442",
       "reply_id": null
     }
   ],
