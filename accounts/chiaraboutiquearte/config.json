@@ -1,0 +1,239 @@
+{
+  "model": "claude-sonnet-5-5",
+  "active_hours_utc": {
+    "start": 12,
+    "end": 24
+  },
+  "min_gap_minutes": 60,
+  "max_posts_per_24h": 8,
+  "ramp": {
+    "enabled": true,
+    "posts_per_day": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "links_from_day": 3
+  },
+  "link_every": 8,
+  "max_post_chars": 260,
+  "memory_posts": 40,
+  "voice": {
+    "name": "Chiara (ChiaraBoutiqueArte)",
+    "persona": "A calm, grounded woman who shares everyday mindfulness, journaling and manifestation practices. She makes printable journals and workbooks, but on X she is here to give, not to sell.",
+    "tone": "Warm, simple, direct. Short sentences. Sounds like a thoughtful friend, never like a guru, a coach or an ad. Concrete over abstract.",
+    "language": "English (clear, international, easy for non-native readers)"
+  },
+  "rules": [
+    "Fully original text. Never quote or paraphrase a known author, book, song or teacher, and never attribute words to anyone.",
+    "No links, no prices, no shop or product mentions in the post.",
+    "At most one hashtag, and usually none.",
+    "No engagement bait: never ask people to like, follow, share, save or comment a specific word.",
+    "It is fine to end with one sincere open question, but not in every post.",
+    "Never promise results. No guarantees about money, health, love or healing. No medical, psychological or financial advice.",
+    "Never state today's date, weekday, season, moon phase or any current event.",
+    "Give one specific, usable idea: a small practice, a prompt or a fresh way of seeing something. No vague inspiration.",
+    "Do not start with 'Reminder:', 'Gentle reminder', 'Here's the thing', 'Unpopular opinion' or a question the reader has heard a hundred times.",
+    "Plain text only: no markdown, no bullet symbols, no title. Line breaks are fine.",
+    "Write for X: one self-contained post, no thread numbering like 1/ or 🧵, no 'a thread' openers."
+  ],
+  "emoji": {
+    "palette": [
+      "💜",
+      "🔮",
+      "✨",
+      "⭐",
+      "🌟",
+      "💫"
+    ],
+    "min": 1,
+    "max": 3,
+    "note": "Plum purple and gold are the brand colours: the purple heart, the crystal ball and the gold stars."
+  },
+  "banned_phrases": [
+    "link in bio",
+    "follow me",
+    "follow for more",
+    "comment below",
+    "comment yes",
+    "double tap",
+    "guaranteed",
+    "etsy"
+  ],
+  "coupon": {
+    "code": "CHIARA20",
+    "text": "Code {code} takes 20% off at checkout."
+  },
+  "pillars": [
+    {
+      "id": "mindfulness",
+      "name": "Everyday mindfulness",
+      "brief": "tiny practices to come back to the present: breath, senses, pauses, slowing down in ordinary moments"
+    },
+    {
+      "id": "journaling",
+      "name": "Journaling",
+      "brief": "why and how to write things down, one concrete journal prompt, making a journaling habit stick"
+    },
+    {
+      "id": "scripting",
+      "name": "Scripting and manifestation methods",
+      "brief": "writing as if it has already happened, letters from the future self, the 3-6-9 and 55x5 methods explained simply"
+    },
+    {
+      "id": "assumption",
+      "name": "Law of assumption",
+      "brief": "living from the end, self-concept, mental diet, revising the day, imagining a short scene before sleep"
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow work",
+      "brief": "gentle self-inquiry: triggers, the inner critic, patterns we repeat, meeting hidden parts with kindness"
+    },
+    {
+      "id": "money",
+      "name": "Money mindset",
+      "brief": "the stories we tell about money, noticing scarcity thoughts, gratitude for what already flows; never promise income"
+    },
+    {
+      "id": "moon",
+      "name": "Moon rituals and intentions",
+      "brief": "new moon intention setting and full moon release as simple reflective rituals; never say which phase is today"
+    },
+    {
+      "id": "intuition",
+      "name": "Intuition and meditation",
+      "brief": "listening inward, simple meditation, the third eye as a symbol of inner seeing, trusting quiet signals"
+    },
+    {
+      "id": "gratitude",
+      "name": "Gratitude and self-kindness",
+      "brief": "specific gratitude, speaking to yourself kindly, rest without guilt, small evening rituals"
+    },
+    {
+      "id": "astrology",
+      "name": "Astrology as self-reflection",
+      "brief": "zodiac signs, the four elements and cycles as mirrors for journaling and self-knowledge; no predictions, and never say where the sun, moon or planets are right now"
+    }
+  ],
+  "formats": [
+    {
+      "id": "micro_practice",
+      "name": "Micro-practice",
+      "brief": "a practice that takes under two minutes, in two or three plain steps"
+    },
+    {
+      "id": "prompt",
+      "name": "Journal prompt",
+      "brief": "one line of context, then a single journal prompt worth answering"
+    },
+    {
+      "id": "reframe",
+      "name": "Reframe",
+      "brief": "a common belief turned around into a more useful one, in three or four short lines"
+    },
+    {
+      "id": "observation",
+      "name": "Small observation",
+      "brief": "a first-person moment from an ordinary day and what it showed"
+    },
+    {
+      "id": "myth",
+      "name": "Myth and truth",
+      "brief": "one misunderstanding about the theme, then what is actually more helpful"
+    },
+    {
+      "id": "tonight",
+      "name": "Try this tonight",
+      "brief": "one thing to try before going to sleep or first thing after waking"
+    },
+    {
+      "id": "question",
+      "name": "Open question",
+      "brief": "two lines of thought that lead to one sincere question for the reader"
+    }
+  ],
+  "products": [
+    {
+      "id": "journal2027",
+      "name": "Manifestation Journal 2027",
+      "brief": "a printable dated journal with monthly intentions, new and full moon ritual pages and the real 2027 moon dates",
+      "url": "https://www.etsy.com/listing/4611457498",
+      "pillars": [
+        "moon",
+        "journaling",
+        "scripting",
+        "astrology"
+      ],
+      "active": true
+    },
+    {
+      "id": "scripting",
+      "name": "Scripting Templates",
+      "brief": "20 printable scripting templates and 60 prompts, such as a letter from your future self and a day in your dream life",
+      "url": "https://www.etsy.com/listing/4611451829",
+      "pillars": [
+        "scripting",
+        "journaling"
+      ],
+      "active": true
+    },
+    {
+      "id": "money",
+      "name": "Money Manifestation Journal",
+      "brief": "a printable 30-day journal to rewrite your money story in ten minutes a day",
+      "url": "https://www.etsy.com/listing/4611471068",
+      "pillars": [
+        "money",
+        "gratitude"
+      ],
+      "active": true
+    },
+    {
+      "id": "assumption",
+      "name": "Law of Assumption Journal",
+      "brief": "a printable workbook with SATS scene design, revision pages, mental diet log and a 21-day persistence challenge",
+      "url": "https://www.etsy.com/listing/4611453297",
+      "pillars": [
+        "assumption"
+      ],
+      "active": true
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow Work Journal",
+      "brief": "a printable guided journal of gentle shadow work prompts",
+      "url": "https://www.etsy.com/listing/4611453961",
+      "pillars": [
+        "shadow"
+      ],
+      "active": true
+    },
+    {
+      "id": "thirdeye",
+      "name": "Third Eye Awakening Ebook",
+      "brief": "an ebook about intuition, meditation and inner seeing",
+      "url": "https://www.etsy.com/listing/4598083410",
+      "pillars": [
+        "intuition",
+        "mindfulness"
+      ],
+      "active": true
+    },
+    {
+      "id": "grabovoi",
+      "name": "Grabovoi Codes Ebook",
+      "brief": "an ebook collecting number sequences used as a focus tool for intention setting",
+      "url": "https://www.etsy.com/listing/4598073744",
+      "pillars": [
+        "scripting",
+        "intuition"
+      ],
+      "active": false
+    }
+  ],
+  "enabled": true,
+  "communities": []
+}
