@@ -1,0 +1,56 @@
+name: X post
+
+on:
+  workflow_dispatch:        # avviato da cron-job.org ogni 30 minuti (o a mano dal tab Actions)
+    inputs:
+      dry_run:
+        description: "Solo prova: genera il testo senza pubblicare"
+        type: boolean
+        default: false
+      accounts:
+        description: "Solo questi account (es. cohabiting), vuoto = tutti"
+        type: string
+        default: ""
+
+concurrency:
+  group: x-post
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Genera e pubblica
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_TOKEN_CHIARABOUTIQUEARTE: ${{ secrets.X_TOKEN_CHIARABOUTIQUEARTE }}
+          X_TOKEN_SECRET_CHIARABOUTIQUEARTE: ${{ secrets.X_TOKEN_SECRET_CHIARABOUTIQUEARTE }}
+          X_TOKEN_COHABITING: ${{ secrets.X_TOKEN_COHABITING }}
+          X_TOKEN_SECRET_COHABITING: ${{ secrets.X_TOKEN_SECRET_COHABITING }}
+          ACCOUNTS: ${{ inputs.accounts }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: python bot.py
+      - name: Salva lo stato
+        if: always()
+        run: |
+          git config user.name "x-bot"
+          git config user.email "x-bot@users.noreply.github.com"
+          git add accounts/*/posted.json
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica allo stato."
+          else
+            git commit -m "state: post $(date -u +%FT%H:%M)"
+            git pull --rebase
+            git push
+          fi
