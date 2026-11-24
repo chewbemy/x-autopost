@@ -310,32 +310,54 @@ def build_reply(reply_intro, product):
 
 
 # ---------------------------------------------------------------- X
+def _creds():
+    get = lambda name: re.sub(r"\s", "", os.environ.get(name, ""))
+    acc = ACCOUNT_ID.upper()
+    return (get("X_API_KEY"), get("X_API_SECRET"), get(f"X_TOKEN_{acc}"), get(f"X_TOKEN_SECRET_{acc}"))
+
+
+def check_creds():
+    """Log the shape of the credentials (never the values) to spot copy/paste mistakes."""
+    key, secret, tok, tok_secret = _creds()
+    uid = tok.split("-", 1)[0] if "-" in tok else "?"
+    log(f"credentials: api key {len(key)} chars, api secret {len(secret)}, "
+        f"token {len(tok)} (user id {uid}), token secret {len(tok_secret)}")
+    if not all((key, secret, tok, tok_secret)):
+        raise RuntimeError("missing X credentials for this account")
+
+
 def publish(text, reply_to=None, topic_tag=None, extra=None):
-    key, secret = os.environ["X_API_KEY"], os.environ["X_API_SECRET"]
-    tok = os.environ[f"X_TOKEN_{ACCOUNT_ID.upper()}"]
-    tok_secret = os.environ[f"X_TOKEN_SECRET_{ACCOUNT_ID.upper()}"]
+    key, secret, tok, tok_secret = _creds()
     body = {"text": text}
     if reply_to:
         body["reply"] = {"in_reply_to_tweet_id": reply_to}
     last = None
-    for attempt in range(3):
+    hosts = ["https://api.x.com/2/tweets", "https://api.twitter.com/2/tweets"]
+    attempt = 0
+    while attempt < 3:
+        url = hosts[0]
         headers = {
-            "Authorization": oauth1.auth_header("POST", X_TWEETS, key, secret, tok, tok_secret),
+            "Authorization": oauth1.auth_header("POST", url, key, secret, tok, tok_secret),
             "Content-Type": "application/json",
         }
         try:
-            resp = requests.post(X_TWEETS, headers=headers, json=body, timeout=60)
+            resp = requests.post(url, headers=headers, json=body, timeout=60)
         except requests.exceptions.RequestException as exc:
             last = RuntimeError(f"network error: {exc}")
             log(f"publish attempt {attempt + 1} failed: {exc}")
+            attempt += 1
             time.sleep(10)
             continue
         if resp.status_code in (200, 201):
             return resp.json()["data"]["id"]
-        last = RuntimeError(f"X API error {resp.status_code}: {resp.text[:400]}")
+        last = RuntimeError(f"X API error {resp.status_code} on {url}: {resp.text[:400]}")
+        log(f"publish failed: {last}")
+        if resp.status_code == 401 and len(hosts) > 1:
+            hosts.pop(0)  # try the legacy host once
+            continue
         if resp.status_code not in (429, 500, 502, 503, 504):
             break  # auth, permission, duplicate, credits: retrying will not help
-        log(f"publish attempt {attempt + 1} failed: {last}")
+        attempt += 1
         time.sleep(15)
     raise last
 
@@ -356,6 +378,8 @@ def run_account():
         f" | theme: {pillar['id']} | format: {fmt['id']} | product: {product['id'] if product else '-'}"
     )
 
+    if not DRY_RUN:
+        check_creds()
     post, reply_intro = generate(pillar, fmt, product, state)
     reply = build_reply(reply_intro, product) if product else ""
     log("\n--- POST ---\n" + post)
