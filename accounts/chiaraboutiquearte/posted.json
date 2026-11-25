@@ -1,5 +1,5 @@
 {
-  "counter": 3,
+  "counter": 4,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -29,6 +29,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125560402037670161",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-25T15:01:08+00:00",
+      "text": "In the shop queue I heard myself think, \"I'm always behind.\"\n\nI've thought it so often it felt like weather, not a choice.\n\nSo I edited it: \"I have enough time.\" Same queue, different person standing in it.\n\nCatch one sentence you repeat today. 💫",
+      "pillar": "assumption",
+      "format": "observation",
+      "product": null,
+      "community": null,
+      "thread_id": "2125605714043281522",
       "reply_id": null
     }
   ],

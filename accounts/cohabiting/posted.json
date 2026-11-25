@@ -1,5 +1,5 @@
 {
-  "counter": 3,
+  "counter": 4,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -29,6 +29,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125560412796023220",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-25T15:01:14+00:00",
+      "text": "Myth: if you really love each other, you let the small stuff go.\n\nTruth: small stuff doesn't leave. It waits, then comes out as a fight about something else. Try a light opener: \"Tiny thing, not a crisis. Can I mention the towels?\" 🌿🧡",
+      "pillar": "communication",
+      "format": "myth",
+      "product": null,
+      "community": null,
+      "thread_id": "2125605736977711361",
       "reply_id": null
     }
   ],
