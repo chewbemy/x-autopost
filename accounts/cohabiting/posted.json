@@ -1,5 +1,5 @@
 {
-  "counter": 5,
+  "counter": 6,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -49,6 +49,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125651000379728006",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-25T21:01:06+00:00",
+      "text": "Tuesday, 6pm. One of you opens the fridge: \"What do we want?\" The other: \"Whatever.\" Twenty minutes later, toast.\n\nTry picking two dinners on Sunday, not seven. Just two. The rest stays loose. Less planning, far fewer toast nights. 🌿🏡",
+      "pillar": "food",
+      "format": "story",
+      "product": null,
+      "community": null,
+      "thread_id": "2125696300234543352",
       "reply_id": null
     }
   ],

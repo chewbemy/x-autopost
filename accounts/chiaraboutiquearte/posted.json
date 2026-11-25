@@ -1,5 +1,5 @@
 {
-  "counter": 5,
+  "counter": 6,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -49,6 +49,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125650993492775138",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-25T21:00:59+00:00",
+      "text": "Try this tonight, before sleep.\n\nThink of one thing money did for you today. Coffee made for you, a bus ride, a charged phone, a light switched on.\n\nSay a quiet thank you for it. Then notice if a \"never enough\" thought shows up. Just notice it. 💜✨",
+      "pillar": "money",
+      "format": "tonight",
+      "product": null,
+      "community": null,
+      "thread_id": "2125696270014480835",
       "reply_id": null
     }
   ],
