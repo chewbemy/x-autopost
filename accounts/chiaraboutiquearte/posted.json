@@ -1,5 +1,5 @@
 {
-  "counter": 4,
+  "counter": 5,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -39,6 +39,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125605714043281522",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-25T18:01:04+00:00",
+      "text": "Myth: shadow work means hunting for everything wrong with you.\n\nTruth: it can be one small question. When something irritates you, ask, \"What is this touching in me?\" Then listen the way you would to a friend. No fixing needed. 💜✨",
+      "pillar": "shadow",
+      "format": "myth",
+      "product": null,
+      "community": null,
+      "thread_id": "2125650993492775138",
       "reply_id": null
     }
   ],
