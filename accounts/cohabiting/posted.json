@@ -1,5 +1,5 @@
 {
-  "counter": 7,
+  "counter": 8,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -70,6 +70,16 @@
       "community": null,
       "thread_id": "2125922808404296135",
       "reply_id": null
+    },
+    {
+      "date": "2026-11-26T15:01:14+00:00",
+      "text": "Building roles without a default script:\n\n1. Each of you lists what needs doing at home, then marks what you enjoy, tolerate, or dread.\n2. Split by that list, not by who \"usually\" does it.\n3. Revisit in a month. Roles are allowed to change. 🏡💚",
+      "pillar": "lgbtq_home",
+      "format": "system",
+      "product": "free_printables",
+      "community": null,
+      "thread_id": "2125968124889776409",
+      "reply_id": "2125968125980225986"
     }
   ],
   "started": "2026-11-24"
