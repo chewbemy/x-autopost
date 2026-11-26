@@ -1,5 +1,5 @@
 {
-  "counter": 6,
+  "counter": 7,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -59,6 +59,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125696300234543352",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-26T12:01:10+00:00",
+      "text": "Some rituals are loud, like a Sunday reset. Some are tiny, like handing over the first coffee before either of you speaks.\n\nThe small ones seem to be the ones that survive busy weeks. What little thing do you two do at home that no one else would notice? 🧡",
+      "pillar": "rituals",
+      "format": "question",
+      "product": null,
+      "community": null,
+      "thread_id": "2125922808404296135",
       "reply_id": null
     }
   ],
