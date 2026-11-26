@@ -1,5 +1,5 @@
 {
-  "counter": 9,
+  "counter": 10,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -89,6 +89,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125998282308722864",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-26T19:30:49+00:00",
+      "text": "Rest is not a reward for finishing everything.\n\nIt's part of the work, like water is part of a garden.\n\nTonight, stop one thing before it's done. Put the cup in the sink, close the laptop, and say, \"That's enough for today.\" 💜🌟",
+      "pillar": "gratitude",
+      "format": "reframe",
+      "product": null,
+      "community": null,
+      "thread_id": "2126035969820484012",
       "reply_id": null
     }
   ],

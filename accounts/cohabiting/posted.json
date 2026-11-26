@@ -1,5 +1,5 @@
 {
-  "counter": 9,
+  "counter": 10,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -89,6 +89,16 @@
       "product": null,
       "community": null,
       "thread_id": "2125998315636658439",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-26T19:30:54+00:00",
+      "text": "Not this: \"I do everything around here.\"\n\nSay this instead: \"I'm stretched thin this week. Can we look at the list and move two things?\"\n\nThe first one keeps score. The second one asks for a teammate. 🔑🌿",
+      "pillar": "chores",
+      "format": "script",
+      "product": null,
+      "community": null,
+      "thread_id": "2126035989416267779",
       "reply_id": null
     }
   ],
