@@ -1,5 +1,5 @@
 {
-  "counter": 7,
+  "counter": 8,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -70,6 +70,16 @@
       "community": null,
       "thread_id": "2125922790054166602",
       "reply_id": null
+    },
+    {
+      "date": "2026-11-26T14:30:56+00:00",
+      "text": "Use your sign as a mirror, not a forecast.\n\nPick one element: fire, earth, air or water.\nWrite two lines about how it shows up in you this week.\nThen ask what that part of you needs, and answer in one sentence. ✨",
+      "pillar": "astrology",
+      "format": "micro_practice",
+      "product": "journal2027",
+      "community": null,
+      "thread_id": "2125960501242839479",
+      "reply_id": "2125960502618517796"
     }
   ],
   "started": "2026-11-24"
