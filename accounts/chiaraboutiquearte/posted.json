@@ -1,5 +1,5 @@
 {
-  "counter": 8,
+  "counter": 9,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -80,6 +80,16 @@
       "community": null,
       "thread_id": "2125960501242839479",
       "reply_id": "2125960502618517796"
+    },
+    {
+      "date": "2026-11-26T17:01:04+00:00",
+      "text": "Intuition often speaks so quietly that we talk over it.\n\nJournal prompt: Think of a small choice you made recently that felt calm and right, before you could explain why. What did that quiet \"yes\" feel like in your body? 🔮💫",
+      "pillar": "intuition",
+      "format": "prompt",
+      "product": null,
+      "community": null,
+      "thread_id": "2125998282308722864",
+      "reply_id": null
     }
   ],
   "started": "2026-11-24"

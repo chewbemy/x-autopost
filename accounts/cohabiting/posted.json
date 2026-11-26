@@ -1,5 +1,5 @@
 {
-  "counter": 8,
+  "counter": 9,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -80,6 +80,16 @@
       "community": null,
       "thread_id": "2125968124889776409",
       "reply_id": "2125968125980225986"
+    },
+    {
+      "date": "2026-11-26T17:01:12+00:00",
+      "text": "Common mistake: assuming home feels safe to both of you just because it's yours.\n\nThe fix: ask each other once, \"Is there anything here that makes you feel unseen?\" Names on mail, photos, how guests talk. Fix one thing this week. 🏡💚",
+      "pillar": "trans_home",
+      "format": "mistake",
+      "product": null,
+      "community": null,
+      "thread_id": "2125998315636658439",
+      "reply_id": null
     }
   ],
   "started": "2026-11-24"
