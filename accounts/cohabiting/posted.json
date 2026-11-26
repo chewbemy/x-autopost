@@ -1,5 +1,5 @@
 {
-  "counter": 10,
+  "counter": 11,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -99,6 +99,16 @@
       "product": null,
       "community": null,
       "thread_id": "2126035989416267779",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-26T22:01:04+00:00",
+      "text": "Myth: if you love each other, talking about money is awkward and unromantic.\n\nTruth: not talking is what gets awkward. Try a ten-minute money coffee once a month. Each of you shares one thing you'd like to save for. No spreadsheets, just wishes. 🧡🏡",
+      "pillar": "money",
+      "format": "myth",
+      "product": null,
+      "community": null,
+      "thread_id": "2126073778220261746",
       "reply_id": null
     }
   ],
