@@ -5,7 +5,7 @@
     "end": 24
   },
   "min_gap_minutes": 60,
-  "max_posts_per_24h": 8,
+  "max_posts_per_24h": 6,
   "ramp": {
     "enabled": true,
     "posts_per_day": [
@@ -17,7 +17,7 @@
     ],
     "links_from_day": 3
   },
-  "link_every": 8,
+  "link_every": 0,
   "max_post_chars": 260,
   "memory_posts": 40,
   "voice": {
@@ -235,5 +235,11 @@
     }
   ],
   "enabled": true,
-  "communities": []
+  "communities": [],
+  "visual": {
+    "enabled": true,
+    "engine_path": "chiara",
+    "avoid_last": 30,
+    "note": "Video in loop fatti dal codice del bot Threads di Chiara (repo pubblico threads-chiaraboutiquearte). Niente link: su X un post con link costa 0,20 $ invece di 0,015 $. 6 post al giorno = circa 2,70 $/mese."
+  }
 }

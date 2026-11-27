@@ -22,9 +22,15 @@ permissions:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+      - name: Motore video di Chiara (repo pubblico)
+        uses: actions/checkout@v4
+        with:
+          repository: chewbemy/threads-chiaraboutiquearte
+          path: chiara
+          sparse-checkout: visuals
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

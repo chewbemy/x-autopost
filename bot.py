@@ -18,6 +18,7 @@ import datetime as dt
 import difflib
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -326,9 +327,11 @@ def check_creds():
         raise RuntimeError("missing X credentials for this account")
 
 
-def publish(text, reply_to=None, topic_tag=None, extra=None):
+def publish(text, reply_to=None, topic_tag=None, extra=None, media_ids=None):
     key, secret, tok, tok_secret = _creds()
     body = {"text": text}
+    if media_ids:
+        body["media"] = {"media_ids": [str(m) for m in media_ids]}
     if reply_to:
         body["reply"] = {"in_reply_to_tweet_id": reply_to}
     last = None
@@ -362,6 +365,93 @@ def publish(text, reply_to=None, topic_tag=None, extra=None):
     raise last
 
 
+# ---------------------------------------------------------------- video posts
+X_MEDIA = "https://api.x.com/2/media/upload"
+
+
+def _x_call(method, url, **kw):
+    key, secret, tok, tok_secret = _creds()
+    headers = kw.pop("headers", {})
+    headers["Authorization"] = oauth1.auth_header(method, url, key, secret, tok, tok_secret)
+    resp = requests.request(method, url, headers=headers, timeout=120, **kw)
+    if resp.status_code not in (200, 201, 202, 204):
+        raise RuntimeError(f"X media error {resp.status_code} on {url}: {resp.text[:400]}")
+    return resp.json() if resp.content else {}
+
+
+def upload_video(path):
+    """Chunked v2 upload (initialize, append, finalize, status). Returns the media id."""
+    data = Path(path).read_bytes()
+    init = _x_call("POST", f"{X_MEDIA}/initialize", json={
+        "media_type": "video/mp4", "total_bytes": len(data), "media_category": "tweet_video"})
+    media_id = init["data"]["id"]
+    chunk = 4 * 1024 * 1024
+    for i in range(0, len(data), chunk):
+        _x_call("POST", f"{X_MEDIA}/{media_id}/append",
+                data={"segment_index": str(i // chunk)}, files={"media": ("chunk", data[i:i + chunk], "application/octet-stream")})
+    fin = _x_call("POST", f"{X_MEDIA}/{media_id}/finalize")
+    info = (fin.get("data") or {}).get("processing_info")
+    waited = 0
+    while info and info.get("state") not in ("succeeded", "failed") and waited < 300:
+        wait = int(info.get("check_after_secs", 5))
+        time.sleep(wait)
+        waited += wait
+        st = _x_call("GET", f"{X_MEDIA}?command=STATUS&media_id={media_id}")
+        info = (st.get("data") or {}).get("processing_info")
+    if info and info.get("state") != "succeeded":
+        raise RuntimeError(f"X could not process the video: {info}")
+    return media_id
+
+
+def run_visual(state, now):
+    """Looping plum-and-gold video made by code (shared with the Threads bot), caption from
+    templates: no Claude API, no AI credits, no links. Only the X post itself is paid."""
+    vis = CONFIG["visual"]
+    sys.path.insert(0, str(ROOT / vis.get("engine_path", "chiara")))
+    from visuals import captions, render
+    from visuals.pick import pick_subject
+
+    rng = random.Random()
+    recent = state["posts"]
+    counter = state["counter"] + 1
+    history = [p.get("subject") for p in recent if p.get("subject")]
+    subject = pick_subject(history, today=now.date(), avoid_last=vis.get("avoid_last", 30), rng=rng)
+    palette = CONFIG["emoji"]["palette"]
+    recent_texts = [p["text"] for p in recent[-CONFIG.get("memory_posts", 25):]]
+    best, best_score = None, 2.0
+    for _ in range(12):
+        cand = captions.make_caption(subject, palette, rng)
+        if threads_len(cand) > CONFIG.get("max_post_chars", 260):
+            continue
+        score = max((difflib.SequenceMatcher(None, cand.lower(), t.lower()).ratio() for t in recent_texts), default=0)
+        if score < best_score:
+            best, best_score = cand, score
+        if score <= 0.6:
+            break
+    if not best:
+        raise RuntimeError("no caption short enough")
+    log(f"Post #{counter} | VIDEO {subject['key']}\n\n--- CAPTION ---\n{best}")
+    path = Path("/tmp") / f"x-{ACCOUNT_ID}-{subject['key'].replace(':', '-')}.mp4"
+    t0 = time.time()
+    render.render(subject, rng.randrange(10 ** 9), str(path))
+    log(f"Rendered {path.name} in {time.time() - t0:.0f}s ({path.stat().st_size // 1024} KB)")
+    if DRY_RUN:
+        log("\nDRY_RUN=1: nothing published, state not saved.")
+        return 0
+    check_creds()
+    media_id = upload_video(path)
+    post_id = publish(best, media_ids=[media_id])
+    log(f"\nPublished video post {post_id}")
+    entry = {"date": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "text": best,
+             "pillar": "visual:" + subject["kind"], "format": "video", "subject": subject["key"],
+             "product": None, "community": None, "thread_id": post_id, "reply_id": None}
+    state["counter"] = counter
+    state.setdefault("started", entry["date"][:10])
+    state["posts"].append(entry)
+    save_state(state)
+    return 0
+
+
 # ---------------------------------------------------------------- main
 def run_account():
     state = load_state()
@@ -371,6 +461,12 @@ def run_account():
         if skip:
             log(f"Skipping: {skip}.")
             return 0
+
+    if (CONFIG.get("visual") or {}).get("enabled"):
+        try:
+            return run_visual(state, now)
+        except Exception as exc:  # nothing published yet: fall back to a text post
+            log(f"Video post not possible this time ({exc}); posting text instead.")
 
     counter, pillar, fmt, product, community = plan_post(state, links_allowed(state, now))
     log(
