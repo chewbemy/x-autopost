@@ -1,5 +1,5 @@
 {
-  "counter": 13,
+  "counter": 14,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -129,6 +129,16 @@
       "product": null,
       "community": null,
       "thread_id": "2126315515882901547",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-27T16:31:08+00:00",
+      "text": "Week three is often the dip. The boxes are gone, the excitement has faded, and you notice every habit.\n\nMaybe a new system needs 90 days before you can judge it. What is one thing you two are still testing at home? 🔑🌿",
+      "pillar": "first_months",
+      "format": "question",
+      "product": null,
+      "community": null,
+      "thread_id": "2126353136894013929",
       "reply_id": null
     }
   ],
