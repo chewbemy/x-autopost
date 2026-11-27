@@ -1,5 +1,5 @@
 {
-  "counter": 16,
+  "counter": 17,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -160,6 +160,16 @@
       "community": null,
       "thread_id": "2126413533328142792",
       "reply_id": "2126413534443753865"
+    },
+    {
+      "date": "2026-11-27T22:31:02+00:00",
+      "text": "Not this: \"Your family is coming AGAIN? Do we have to do the whole holiday thing?\"\n\nSay this instead: \"I want us both to enjoy the holidays. Can we pick which visits matter most and decide together how we handle the awkward bits?\" 🧡🏡",
+      "pillar": "lgbtq_home",
+      "format": "script",
+      "product": null,
+      "community": null,
+      "thread_id": "2126443709055299737",
+      "reply_id": null
     }
   ],
   "started": "2026-11-24"
