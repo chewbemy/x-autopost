@@ -1,5 +1,5 @@
 {
-  "counter": 13,
+  "counter": 14,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -130,6 +130,17 @@
       "product": null,
       "community": null,
       "thread_id": "2126315474594210236",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-27T16:01:37+00:00",
+      "text": "X · Wheel Of Fortune\n\n💜 Wheel Of Fortune reminds you that change is allowed.\n\nScreenshot it, set it as your wallpaper. 💫",
+      "pillar": "visual:tarot",
+      "format": "video",
+      "subject": "tarot:wheel_of_fortune",
+      "product": null,
+      "community": null,
+      "thread_id": "2126345710706524293",
       "reply_id": null
     }
   ],
