@@ -1,5 +1,5 @@
 {
-  "counter": 16,
+  "counter": 17,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -163,6 +163,17 @@
       "product": null,
       "community": null,
       "thread_id": "2126406106306031968",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-27T22:01:30+00:00",
+      "text": "XVII · The Star\n\nJournal prompt: where in your life are you ready for hope?\n\nScreenshot it, set it as your wallpaper. 🔮 ✨",
+      "pillar": "visual:tarot",
+      "format": "video",
+      "subject": "tarot:the_star",
+      "product": null,
+      "community": null,
+      "thread_id": "2126436276199170177",
       "reply_id": null
     }
   ],
