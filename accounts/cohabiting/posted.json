@@ -1,5 +1,5 @@
 {
-  "counter": 15,
+  "counter": 16,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -150,6 +150,16 @@
       "community": null,
       "thread_id": "2126383331902402825",
       "reply_id": null
+    },
+    {
+      "date": "2026-11-27T20:31:07+00:00",
+      "text": "Common mistake: saving romance for special occasions.\n\nThe fix: pick one tiny thing that happens every day. A kiss at the door, a shared tea, a song while you cook. Small and boring is the point, because it survives busy weeks. 🧡🌿",
+      "pillar": "rituals",
+      "format": "mistake",
+      "product": "free_printables",
+      "community": null,
+      "thread_id": "2126413533328142792",
+      "reply_id": "2126413534443753865"
     }
   ],
   "started": "2026-11-24"
