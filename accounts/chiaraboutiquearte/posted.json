@@ -1,5 +1,5 @@
 {
-  "counter": 19,
+  "counter": 20,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -196,6 +196,17 @@
       "product": null,
       "community": null,
       "thread_id": "2126677865974665450",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-28T16:01:35+00:00",
+      "text": "Gemini · May 21 – Jun 20\n\nGemini season is a reminder to be playful, even for a day.\n\nYour daily dose of stardust.\n\n🔮🌟💫",
+      "pillar": "visual:sign",
+      "format": "video",
+      "subject": "sign:gemini",
+      "product": null,
+      "community": null,
+      "thread_id": "2126708089508245816",
       "reply_id": null
     }
   ],
