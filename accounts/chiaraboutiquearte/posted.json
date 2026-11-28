@@ -1,5 +1,5 @@
 {
-  "counter": 18,
+  "counter": 19,
   "posts": [
     {
       "date": "2026-11-24T17:48:37+00:00",
@@ -185,6 +185,17 @@
       "product": null,
       "community": null,
       "thread_id": "2126647655812022441",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-28T14:01:29+00:00",
+      "text": "Capricorn · Dec 22 – Jan 19\n\nJournal prompt for Capricorn energy: What are you building that your future self will thank you for?\n\nBreathe in, read it twice.\n\n⭐",
+      "pillar": "visual:sign",
+      "format": "video",
+      "subject": "sign:capricorn",
+      "product": null,
+      "community": null,
+      "thread_id": "2126677865974665450",
       "reply_id": null
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "counter": 18,
+  "counter": 19,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -179,6 +179,16 @@
       "product": null,
       "community": null,
       "thread_id": "2126647666201260219",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-28T14:01:43+00:00",
+      "text": "Four chore questions to settle together, without a scoreboard:\n\nWhat does \"clean enough\" look like to each of you?\nWhich jobs are invisible, like restocking or booking repairs?\nWho does a task from spotting it to finishing it?\nWhen do you swap? 🌿🔑",
+      "pillar": "chores",
+      "format": "checklist",
+      "product": null,
+      "community": null,
+      "thread_id": "2126677925223366931",
       "reply_id": null
     }
   ],
