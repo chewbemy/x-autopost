@@ -1,5 +1,5 @@
 {
-  "counter": 21,
+  "counter": 22,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -209,6 +209,16 @@
       "product": null,
       "community": null,
       "thread_id": "2126730576640065898",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-28T19:01:08+00:00",
+      "text": "A tiny system for hard talks:\n\n1. Ask first: \"Is now an okay time for something small and a bit tricky?\"\n2. Say one thing that bugged you, plus what you'd like instead. Just one.\n3. Let your partner reply fully before you answer. 🌿🔑",
+      "pillar": "communication",
+      "format": "system",
+      "product": null,
+      "community": null,
+      "thread_id": "2126753272648368352",
       "reply_id": null
     }
   ],
