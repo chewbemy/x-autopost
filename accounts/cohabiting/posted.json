@@ -1,5 +1,5 @@
 {
-  "counter": 22,
+  "counter": 23,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -219,6 +219,16 @@
       "product": null,
       "community": null,
       "thread_id": "2126753272648368352",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-28T20:30:59+00:00",
+      "text": "Common mistake: judging a new routine after one rough week.\n\nThe fix: name it a trial. Say, \"Let's try this for a month, then tweak it.\" Most new habits feel clumsy before they feel normal. Give them room to settle in. 🌿🔑",
+      "pillar": "first_months",
+      "format": "mistake",
+      "product": null,
+      "community": null,
+      "thread_id": "2126775886565478474",
       "reply_id": null
     }
   ],
