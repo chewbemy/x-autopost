@@ -1,5 +1,5 @@
 {
-  "counter": 20,
+  "counter": 21,
   "posts": [
     {
       "date": "2026-11-24T17:48:44+00:00",
@@ -199,6 +199,16 @@
       "product": null,
       "community": null,
       "thread_id": "2126708097200615769",
+      "reply_id": null
+    },
+    {
+      "date": "2026-11-28T17:30:57+00:00",
+      "text": "Moving in means two couches, two sets of mugs, one living room. Most of it can go. 🌿\n\nBut one slightly battered thing of yours often needs to stay, because it says you live here, not just visit. What was that thing for you? 🏡",
+      "pillar": "space",
+      "format": "question",
+      "product": null,
+      "community": null,
+      "thread_id": "2126730576640065898",
       "reply_id": null
     }
   ],
